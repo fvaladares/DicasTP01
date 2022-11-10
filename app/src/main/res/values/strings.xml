@@ -5,4 +5,12 @@
     <string name="idoso_lbl">Idoso</string>
     <string name="btn_enviar_lbl">Enviar</string>
     <string name="peso">Peso em KG</string>
+    <string name="adicionar_nova_activity">Adicionar nova activity</string>
+    <string name="nao_existem_itens">Não existem itens na lista.</string>
+
+
+    <plurals name="quantidade_peso">
+        <item quantity="zero">Não existem itens na lista.</item>
+        <item quantity="other">Quantidade de pesos na lista: <b>%d</b></item>
+    </plurals>
 </resources>
