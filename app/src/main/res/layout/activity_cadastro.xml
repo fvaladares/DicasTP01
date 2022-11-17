@@ -4,27 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/margem_padrao"
     tools:context=".ui.cadastro.CadastroActivity">
 
-    <EditText
-        android:id="@+id/etExemplo"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilExemplo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_padrao"
         android:hint="@string/peso"
-        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@id/rgClassificacaoIdade"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etExemplo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColorHint="#757575" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <RadioGroup
         android:id="@+id/rgClassificacaoIdade"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margem_padrao"
+        android:layout_marginTop="@dimen/espaco_entre_itens"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etExemplo">
+        app:layout_constraintTop_toBottomOf="@id/tilExemplo">
 
         <RadioButton
             android:id="@+id/rbAdulto"
@@ -46,7 +58,11 @@
         android:id="@+id/btnEnviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_padrao"
+        android:fontFamily="@font/actor"
         android:text="@string/btn_enviar_lbl"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rgClassificacaoIdade" />

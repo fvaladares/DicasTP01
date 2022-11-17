@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginVertical="3dp"
+    android:backgroundTint="@color/secondaryLightColor"
+    android:elevation="@dimen/espaco_entre_itens"
+    app:strokeColor="@color/primaryDarkColor"
+    app:strokeWidth="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,6 +21,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/espaco_entre_itens"
+            android:fontFamily="@font/actor"
+            android:textColor="#880E4F"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/tvFaixaEtaria"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -24,9 +33,13 @@
         <TextView
             android:id="@+id/tvFaixaEtaria"
             android:layout_width="0dp"
+
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/espaco_entre_itens"
             android:layout_marginBottom="@dimen/espaco_entre_itens"
+            android:fontFamily="@font/actor"
+            android:textColor="#880E4F"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,4 +48,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

@@ -35,20 +35,24 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun salvarPeso() {
-        val peso = binding.etExemplo.text.toString().toDouble()
+        val peso = binding.etExemplo.text.toString()
         val faixaEtaria = validarIdade()
 
-        Intent().apply {
-            putExtra(
-                MainActivity.TAG,
-                RegistroPeso(
-                    peso = peso,
-                    faixaEtaria = faixaEtaria
+        if (peso.isBlank()) {
+            binding.tilExemplo.error = getString(R.string.error_peso)
+
+        } else {
+            binding.tilExemplo.error = null
+            Intent().apply {
+                putExtra(
+                    MainActivity.TAG, RegistroPeso(
+                        peso = peso.toDouble(), faixaEtaria = faixaEtaria
+                    )
                 )
-            )
-            setResult(RESULT_OK, this)
+                setResult(RESULT_OK, this)
+            }
+            finish()
         }
-        finish()
     }
 
     private fun configurarRGListener() {

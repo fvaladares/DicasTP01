@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
             binding.tvQtd.setText(R.string.nao_existem_itens)
         } else {
             binding.apply {
-                rvItens.adapter = PesoAdapter(listaPesos)
+                rvItens.adapter = PesoAdapter(listaPesos, applicationContext)
                 tvQtd.text = resources.getQuantityString(
                     R.plurals.quantidade_peso,
                     listaPesos.size,

@@ -7,7 +7,9 @@
     <string name="peso">Peso em KG</string>
     <string name="adicionar_nova_activity">Adicionar nova activity</string>
     <string name="nao_existem_itens">Não existem itens na lista.</string>
-
+    <string name="rotulo_peso">Peso: %1$f Kg</string>
+    <string name="rotulo_faixa_etaria">Faixa etária: %1$s</string>
+    <string name="error_peso">Por favor, informe o peso.</string>
 
     <plurals name="quantidade_peso">
         <item quantity="zero">Não existem itens na lista.</item>
